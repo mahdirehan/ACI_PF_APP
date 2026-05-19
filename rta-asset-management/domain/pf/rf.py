@@ -2,48 +2,74 @@
 Risk Factor (RF) calculation module.
 
 RF measures the inherent risk/importance of an asset type.
-It's based on predefined risk scores normalized to a 10-100 scale.
 
-Excel formula: =10+((Score-MIN(All_Scores))/(MAX(All_Scores)-MIN(All_Scores)))*(100-10)
+Two paths are supported:
+
+1. Legacy lookup: a predefined per-asset-type risk score (from
+   ``rf_scores.json``) is min-max normalized to a 10-100 scale across all
+   asset types. Excel formula:
+   ``=10+((Score-MIN(All_Scores))/(MAX(All_Scores)-MIN(All_Scores)))*(100-10)``
+
+2. Per-asset override: a user-entered total from a :class:`RiskAssessment`
+   (sum of 4 OAMP categories, each Probability x Impact) is mapped to RF by
+   direct clamping into [10, 100] via :func:`domain.risk.total_to_rf`. The
+   total naturally falls in [4, 100], so the clamp only floors very-low-risk
+   assets at RF=10.
 """
 
-from typing import Optional
+from typing import Optional, Tuple
 from domain.lookups.loader import load_rf_scores, get_rf_score_value
+from domain.risk.aggregator import total_to_rf
+from domain.risk.models import RiskAssessment
 
 
-_RF_CACHE: dict[str, float] = {}
+_RF_CACHE: dict[Tuple[str, Optional[int]], float] = {}
 
 
-def calculate_rf(asset_type: str) -> float:
+def calculate_rf(
+    asset_type: str,
+    override_score: Optional[int] = None,
+) -> float:
     """
-    Calculate Risk Factor for an asset type.
+    Calculate Risk Factor for an asset.
     
-    RF is determined by the asset type's inherent risk score, which is
-    then min-max normalized to a 10-100 scale across all asset types.
+    When ``override_score`` is provided (typically the aggregated total from a
+    per-asset :class:`RiskAssessment`), RF is the direct-clamp mapping
+    ``max(10, min(100, override_score))``. The legacy min-max pool is skipped
+    so the user's input fully drives the result.
     
-    Excel formula: =10+((Score-MIN)/(MAX-MIN))*(100-10)
-    
-    This ensures:
+    When ``override_score`` is ``None``, the legacy per-asset-type lookup
+    runs and produces the historical behavior:
     - Minimum RF = 10 (for lowest-risk assets like Benches)
     - Maximum RF = 100 (for highest-risk assets like Traffic Signals)
     
     Args:
         asset_type: Asset type key (e.g., "TRAFFIC_SIGNAL", "MANHOLE")
-        
+        override_score: Optional per-asset aggregated risk total (4-100)
+    
     Returns:
         Risk Factor (10-100)
-        
+    
     Raises:
-        ValueError: If asset type not found in RF scores
-        
+        ValueError: If no override is supplied and the asset type is not
+            present in the legacy RF score lookup.
+    
     Examples:
-        >>> calculate_rf("TRAFFIC_SIGNAL")  # Highest risk (117)
+        >>> calculate_rf("TRAFFIC_SIGNAL")  # Legacy lookup, highest risk
         100.0
-        >>> calculate_rf("BENCHES")  # Lowest risk (60)
+        >>> calculate_rf("BENCHES")  # Legacy lookup, lowest risk
         10.0
+        >>> calculate_rf("MANHOLE", override_score=87)  # User-driven
+        87.0
     """
-    if asset_type in _RF_CACHE:
-        return _RF_CACHE[asset_type]
+    cache_key = (asset_type, override_score)
+    if cache_key in _RF_CACHE:
+        return _RF_CACHE[cache_key]
+    
+    if override_score is not None:
+        rf = total_to_rf(override_score)
+        _RF_CACHE[cache_key] = rf
+        return rf
     
     rf_scores = load_rf_scores()
     
@@ -61,23 +87,43 @@ def calculate_rf(asset_type: str) -> float:
         rf = 10 + ((score - min_score) / (max_score - min_score)) * 90
     
     rf = round(rf, 4)
-    _RF_CACHE[asset_type] = rf
+    _RF_CACHE[cache_key] = rf
     return rf
 
 
-def get_rf_for_asset(asset_type: str, default: Optional[float] = None) -> Optional[float]:
+def calculate_rf_from_assessment(assessment: RiskAssessment) -> float:
     """
-    Get RF for an asset type, returning default if not found.
+    Convenience wrapper: derive RF directly from a :class:`RiskAssessment`.
+    
+    Equivalent to ``calculate_rf(assessment.asset_type,
+    override_score=assessment.total_score)``.
+    """
+    return calculate_rf(
+        assessment.asset_type,
+        override_score=assessment.total_score,
+    )
+
+
+def get_rf_for_asset(
+    asset_type: str,
+    default: Optional[float] = None,
+    override_score: Optional[int] = None,
+) -> Optional[float]:
+    """
+    Get RF for an asset, returning ``default`` if no value can be derived.
     
     Args:
         asset_type: Asset type key
-        default: Value to return if asset not found
-        
+        default: Value to return if asset not found (legacy path only)
+        override_score: Optional per-asset aggregated risk total. When set,
+            the function always returns ``calculate_rf(asset_type,
+            override_score=...)`` since that path never raises.
+    
     Returns:
         Risk Factor or default value
     """
     try:
-        return calculate_rf(asset_type)
+        return calculate_rf(asset_type, override_score=override_score)
     except ValueError:
         return default
 

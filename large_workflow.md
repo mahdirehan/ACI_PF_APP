@@ -10,14 +10,44 @@ The orchestration entry point is `generate_master_priority(...)` in `scripts/gen
 
 ```mermaid
 flowchart TD
-    A[Asset Excel files] --> B[Extract rows<br/>normalize columns]
-    B --> C[Consolidate into unified table]
-    C --> D["Compute PF = 0.60*CF + 0.20*RF + 0.20*FLF<br/>derive missing factors from ACI + Asset_Type"]
-    D --> E[Sort: PF desc, ACI asc]
-    E --> F[(Master_Priority_Output.xlsx)]
-    F --> G[Priority Ranking]
-    F --> H[Summary Statistics]
-    F --> I[Source Mapping]
+    A["Raw input .xlsx files<br/>(RoW Assets_ACI Sheet, MASTER_EXCEL_E11,<br/>1. Calculations for Priority Index, ...)"] --> B[discover_input_files<br/>auto-discover .xlsx in parent dir<br/>or take explicit CLI files]
+
+    B --> C{For each file}
+    C --> D[openpyxl load_workbook<br/>read_only=True, data_only=True]
+    D --> E{For each sheet}
+
+    E --> F[_find_header_row<br/>scan first 12 rows, prefer one<br/>containing ACI / PF / CF / RF / FLF]
+    F --> G{is_inventory_sheet?<br/>has ACI-like column<br/>and not a summary sheet}
+    G -- no --> E
+    G -- yes --> H[extract_sheet<br/>normalize headers via COLUMN_ALIASES<br/>classify each col: canonical / defect / rating / extra]
+
+    H --> I[Build AssetRow per data row<br/>+ infer Asset_Type from sheet name<br/>+ stamp Source_File / Source_Sheet]
+    I --> J[Drop rows with no Asset_ID,<br/>no ACI, no Description]
+    J --> K[SheetExtract collected]
+    K --> E
+
+    E -- all sheets done --> L[consolidate<br/>merge every SheetExtract<br/>order extras by frequency + first-seen]
+
+    L --> M[compute_missing_pf - per row]
+    M --> N{PF already present?}
+    N -- yes --> R[Keep PF as-is<br/>PF_Computed = False]
+    N -- no --> O{CF, RF, FLF<br/>all present?}
+    O -- no --> P["Derive missing factors from ACI + Asset_Type:<br/>CF = IF(ACI>=80, 0, (80-ACI)/80*100)<br/>RF = 10 + ((score-min)/(max-min))*90<br/>FLF = deterioration curve, clamped 0-100"]
+    P --> Q["PF = 0.60*CF + 0.20*RF + 0.20*FLF<br/>PF_Computed = True"]
+    O -- yes --> Q
+
+    Q --> S[Sort: PF desc, ACI asc, Asset_Type asc]
+    R --> S
+
+    S --> T["xlsxwriter.Workbook(Master_Priority_Output.xlsx)<br/>constant_memory=True"]
+
+    T --> U["Sheet 1 - Priority Ranking<br/>Rank = =ROW()-1<br/>Frozen header + autofilter<br/>Alt-row shading, 2-dp factor cols<br/>3-color scales on PF (G->Y->R) and ACI (R->Y->G)"]
+    T --> V["Sheet 2 - Summary Statistics<br/>AVERAGE / MEDIAN / MIN / MAX / COUNT per factor<br/>COUNTIF per asset type<br/>PERCENTILE-based priority bands<br/>Top-10 table referencing Sheet 1"]
+    T --> W["Sheet 3 - Source Mapping<br/>Per (file, sheet) row counts<br/>Asset-type breakdown per sheet<br/>Per-file totals, timestamp"]
+
+    U --> X[("Master_Priority_Output.xlsx")]
+    V --> X
+    W --> X
 ```
 
 ---
@@ -105,103 +135,3 @@ Built with **xlsxwriter** in `constant_memory` mode (much faster than openpyxl o
 `Raw multi-sheet workbooks` -> normalize headers/rows -> `unified AssetRow list` -> backfill PF from ACI + asset type via the domain factor modules -> sort by PF desc / ACI asc -> emit one nicely-formatted 3-sheet workbook with live formulas.
 
 ---
-
-## Per-asset risk overrides (OAMP)
-
-The Risk Factor used inside PF can be replaced with a **per-asset user-defined risk score** instead of the per-asset-type lookup in `rf_scores.json`. This implements the OAMP risk register approach: an inspector rates each asset on the four high-level risk categories and the aggregated total drives that asset's RF.
-
-### Schema
-
-Defined in `domain/lookups/risk_register_schema.json` and loaded via `domain/risk/loader.py`:
-
-| Risk ID | Category |
-|---------|----------|
-| R001 | A. Natural Events and Hazards |
-| R002 | B. External Impacts on The Agency |
-| R003 | C. Physical Asset Failures |
-| R004 | D. Operational Risk Events |
-
-Per category the user enters:
-- **Probability** (1-5)
-- **Impact** (1-5)
-- **Description** (free-text, optional)
-
-### Aggregation and RF mapping
-
-```
-per_category_score = probability * impact      # range [1, 25]
-total              = sum of 4 category scores  # range [4, 100]
-RF                 = max(10, min(100, total))  # direct clamp into [10, 100]
-```
-
-The clamp is intentional: very-low-risk assets floor at RF=10 so the PF formula stays well-defined. The aggregated total IS the RF for that asset; the legacy 60-117 min-max pool is bypassed.
-
-### Input file (UI -> pipeline contract)
-
-The future UI persists each asset's assessment as JSON, then the pipeline reads the file via `--risk-assessments`:
-
-```json
-{
-  "version": "OAMP-2025",
-  "assessments": [
-    {
-      "asset_id": "ASSET_001",
-      "asset_type": "CRASH_CUSHION",
-      "entries": [
-        {"risk_id": "R001", "probability": 3, "impact": 3, "description": "Sandstorms"},
-        {"risk_id": "R002", "probability": 2, "impact": 4, "description": ""},
-        {"risk_id": "R003", "probability": 4, "impact": 5, "description": ""},
-        {"risk_id": "R004", "probability": 2, "impact": 2, "description": ""}
-      ],
-      "notes": "Inspected 2026-05-19"
-    }
-  ]
-}
-```
-
-### Running with overrides
-
-```bash
-python scripts/generate_master_priority.py --risk-assessments path/to/assessments.json
-```
-
-Behavior:
-- Rows whose `Asset_ID` matches an entry use the user-driven RF; the existing `RF` column is recomputed.
-- Two new output columns appear in `Priority Ranking`:
-  - `Risk_Total` - the aggregated integer (auditability)
-  - `Risk_Source` - `"override"` for user-driven, `"default"` for legacy lookup
-- Rows without a matching `Asset_ID` keep the legacy per-asset-type behavior. Omitting `--risk-assessments` reproduces today's output byte-for-byte.
-
-### Programmatic API (for the UI)
-
-```python
-from domain.risk import create_risk_assessment, get_risk_categories
-from domain.pf.rf import calculate_rf_from_assessment
-from domain.pf.aggregator import calculate_pf
-
-categories = get_risk_categories()  # render rows in the popup
-
-assessment = create_risk_assessment(
-    asset_id="ASSET_001",
-    asset_type="CRASH_CUSHION",
-    risk_inputs={
-        "R001": (3, 3, "Sandstorms"),
-        "R002": (2, 4, ""),
-        "R003": (4, 5, "Corrosion"),
-        "R004": (2, 2, ""),
-    },
-)
-
-rf = calculate_rf_from_assessment(assessment)             # 44.0
-pf = calculate_pf("CRASH_CUSHION", aci=65.5, risk_score_override=assessment.total_score)
-```
-
----
-
-## Related docs
-
-- [TESTING_GUIDE.md](./TESTING_GUIDE.md) - how to run unit tests and regenerate the master output
-- `scripts/generate_master_priority.py` - the orchestrator implementing this workflow
-- `domain/pf/aggregator.py` - canonical PF formula reference
-- `domain/risk/` - risk register models, aggregation, and loader
-- `domain/lookups/risk_register_schema.json` - shipped OAMP risk categories

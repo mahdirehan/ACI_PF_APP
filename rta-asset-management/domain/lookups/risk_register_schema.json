@@ -1,0 +1,21 @@
+{
+  "version": "OAMP-2025",
+  "categories": [
+    {
+      "risk_id": "R001",
+      "name": "A. Natural Events and Hazards"
+    },
+    {
+      "risk_id": "R002",
+      "name": "B. External Impacts on The Agency"
+    },
+    {
+      "risk_id": "R003",
+      "name": "C. Physical Asset Failures"
+    },
+    {
+      "risk_id": "R004",
+      "name": "D. Operational Risk Events"
+    }
+  ]
+}

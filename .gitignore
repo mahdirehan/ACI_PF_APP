@@ -46,5 +46,8 @@ desktop.ini
 *.bak
 ~$*
 
+# Generated test reports
+test_report_*.xlsx
+
 # Cursor session
 .cursor/

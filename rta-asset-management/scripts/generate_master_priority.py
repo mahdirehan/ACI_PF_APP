@@ -51,6 +51,12 @@ try:
 except Exception:
     _DOMAIN_AVAILABLE = False
 
+try:
+    from domain.risk.loader import load_risk_assessments_file as _load_risk_assessments
+    _RISK_DOMAIN_AVAILABLE = True
+except Exception:
+    _RISK_DOMAIN_AVAILABLE = False
+
 DEFAULT_PF_WEIGHTS = {"cf": 0.60, "rf": 0.20, "flf": 0.20}
 
 HEADER_SEARCH_ROWS = 12
@@ -100,6 +106,8 @@ CANONICAL_FIELDS = [
     "PF",
     "ACI_Rating",
     "PF_Computed",
+    "Risk_Total",
+    "Risk_Source",
     "Source_Sheet",
     "Source_File",
 ]
@@ -409,13 +417,19 @@ def _normalize_asset_type_key(asset_type: Any) -> str:
 
 
 def _derive_factors_from_aci(
-    aci: float, asset_type: Any
+    aci: float,
+    asset_type: Any,
+    risk_override_score: Optional[int] = None,
 ) -> tuple[Optional[float], Optional[float], Optional[float]]:
     """
     Use the domain CF/RF/FLF formulas to fill in factors from ACI + asset type.
 
     Returns (cf, rf, flf). Any may be None if the lookup fails. CF is always
     computable from ACI alone.
+
+    When ``risk_override_score`` is provided (per-asset OAMP risk assessment
+    total), it is passed through to the RF calculation and produces the
+    user-driven clamped value instead of the legacy per-type lookup.
     """
     cf: Optional[float] = None
     rf: Optional[float] = None
@@ -428,6 +442,8 @@ def _derive_factors_from_aci(
         key = _normalize_asset_type_key(asset_type)
         if key:
             try:
+                rf = _domain_get_rf(key, override_score=risk_override_score)
+            except TypeError:
                 rf = _domain_get_rf(key)
             except Exception:
                 rf = None
@@ -447,7 +463,9 @@ def _derive_factors_from_aci(
 
 
 def compute_missing_pf(
-    rows: list[AssetRow], weights: dict[str, float] = DEFAULT_PF_WEIGHTS
+    rows: list[AssetRow],
+    weights: dict[str, float] = DEFAULT_PF_WEIGHTS,
+    risk_overrides: Optional[dict[str, int]] = None,
 ) -> int:
     """
     Fill in missing PF values.
@@ -464,14 +482,28 @@ def compute_missing_pf(
 
     The formula matches ``domain/pf/aggregator.py``:
         PF = w_cf * CF + w_rf * RF + w_flf * FLF
+
+    When ``risk_overrides`` (mapping ``Asset_ID`` -> aggregated total) is
+    supplied, RF is recomputed from the user's per-asset risk assessment
+    instead of the legacy per-type lookup; the override is also recorded on
+    the row as ``Risk_Total`` / ``Risk_Source`` for auditability.
     """
     w_cf = weights["cf"]
     w_rf = weights["rf"]
     w_flf = weights["flf"]
+    overrides = risk_overrides or {}
     computed = 0
     for row in rows:
+        asset_id = _to_str(row.canonical.get("Asset_ID"))
+        override_score = overrides.get(asset_id) if asset_id else None
+        if override_score is not None:
+            row.canonical["Risk_Total"] = int(override_score)
+            row.canonical["Risk_Source"] = "override"
+        else:
+            row.canonical["Risk_Source"] = "default"
+
         pf_existing = _to_float(row.canonical.get("PF"))
-        if pf_existing is not None:
+        if pf_existing is not None and override_score is None:
             row.canonical["PF"] = round(pf_existing, 4)
             row.canonical["PF_Computed"] = False
             continue
@@ -481,9 +513,13 @@ def compute_missing_pf(
         aci = _to_float(row.canonical.get("ACI"))
         asset_type = row.canonical.get("Asset_Type")
 
+        if override_score is not None:
+            rf = None
+            row.canonical.pop("RF", None)
+
         if (cf is None or rf is None or flf is None) and aci is not None:
             derived_cf, derived_rf, derived_flf = _derive_factors_from_aci(
-                aci, asset_type
+                aci, asset_type, risk_override_score=override_score
             )
             if cf is None and derived_cf is not None:
                 cf = derived_cf
@@ -510,13 +546,19 @@ def compute_missing_pf(
 # ---------------------------------------------------------------------------
 
 
-def consolidate(extracts: list[SheetExtract]) -> tuple[list[str], list[AssetRow]]:
+def consolidate(
+    extracts: list[SheetExtract],
+    risk_overrides: Optional[dict[str, int]] = None,
+) -> tuple[list[str], list[AssetRow]]:
     """
     Merge all extracts into a single sorted list of rows.
 
     Returns (extra_columns_in_order, all_rows). ``extra_columns_in_order`` is
     the union of extra column names sorted by first appearance and frequency
     so the output is deterministic.
+
+    ``risk_overrides`` (Asset_ID -> aggregated risk total) is passed to
+    :func:`compute_missing_pf` to apply per-asset OAMP risk assessments.
     """
     all_rows: list[AssetRow] = []
     extra_first_seen: dict[str, int] = {}
@@ -536,7 +578,7 @@ def consolidate(extracts: list[SheetExtract]) -> tuple[list[str], list[AssetRow]
         key=lambda k: (-extra_counts[k], extra_first_seen[k]),
     )
 
-    compute_missing_pf(all_rows)
+    compute_missing_pf(all_rows, risk_overrides=risk_overrides)
 
     def sort_key(row: AssetRow) -> tuple[float, float, str]:
         pf = _to_float(row.canonical.get("PF"))
@@ -1064,6 +1106,44 @@ def discover_input_files(input_dir: Path) -> list[Path]:
     ]
 
 
+def _load_risk_overrides(path: Optional[Path]) -> dict[str, int]:
+    """Load per-asset risk assessment totals keyed by ``Asset_ID``.
+
+    Returns an empty dict when ``path`` is ``None`` or the file is missing,
+    so downstream callers can always treat the result as a lookup table.
+    Logs a short summary so it is visible alongside the other pipeline stats.
+    """
+    if path is None:
+        return {}
+    if not _RISK_DOMAIN_AVAILABLE:
+        _log(
+            "  ! Risk domain module unavailable; ignoring --risk-assessments. "
+            "Ensure domain/risk is importable."
+        )
+        return {}
+    if not path.exists():
+        _log(f"  ! Risk assessments file not found: {path}")
+        return {}
+
+    try:
+        assessments = _load_risk_assessments(path)
+    except Exception as exc:
+        _log(f"  ! Failed to read risk assessments from {path.name}: {exc}")
+        return {}
+
+    overrides: dict[str, int] = {}
+    for asset_id, assessment in assessments.items():
+        if not asset_id:
+            continue
+        try:
+            overrides[str(asset_id)] = int(assessment.total_score)
+        except Exception:
+            continue
+
+    _log(f"  Loaded {len(overrides)} risk assessment override(s) from {path.name}")
+    return overrides
+
+
 def process_file(path: Path) -> list[SheetExtract]:
     """Open one workbook and extract every inventory sheet."""
     _log(f"  Reading: {path.name}")
@@ -1098,6 +1178,7 @@ def generate_master_priority(
     input_dir: Path,
     output_path: Path,
     explicit_files: Optional[list[Path]] = None,
+    risk_assessments_path: Optional[Path] = None,
 ) -> Path:
     """End-to-end pipeline. Returns the output path."""
     _log("=" * 70)
@@ -1113,6 +1194,8 @@ def generate_master_priority(
     for p in files:
         _log(f"  * {p.name}")
 
+    risk_overrides = _load_risk_overrides(risk_assessments_path)
+
     all_extracts: list[SheetExtract] = []
     for path in files:
         if not path.exists():
@@ -1125,15 +1208,19 @@ def generate_master_priority(
 
     _log("\nConsolidating rows...")
     t0 = time.perf_counter()
-    extra_columns, all_rows = consolidate(all_extracts)
+    extra_columns, all_rows = consolidate(all_extracts, risk_overrides=risk_overrides)
     _log(f"Consolidation: {len(all_rows)} rows in {time.perf_counter() - t0:.1f}s")
     computed_pf = sum(1 for r in all_rows if r.canonical.get("PF_Computed"))
     missing_pf = sum(1 for r in all_rows if _to_float(r.canonical.get("PF")) is None)
+    risk_override_hits = sum(
+        1 for r in all_rows if r.canonical.get("Risk_Source") == "override"
+    )
 
     _log(f"\nTotal rows consolidated: {len(all_rows)}")
     _log(f"  PF from source:               {len(all_rows) - computed_pf - missing_pf}")
     _log(f"  PF computed by us:            {computed_pf}")
     _log(f"  PF missing (no PF/CF/RF/FLF): {missing_pf}")
+    _log(f"  Rows with risk override:      {risk_override_hits}")
 
     full_columns = _deduplicate_columns(PRIORITY_COLUMNS + extra_columns)
 
@@ -1188,6 +1275,17 @@ def main(argv: Optional[list[str]] = None) -> int:
         help=f"Output .xlsx path (default: {DEFAULT_OUTPUT_FILE})",
     )
     parser.add_argument(
+        "--risk-assessments",
+        type=Path,
+        default=None,
+        help=(
+            "Optional path to a per-asset risk assessments JSON file (produced "
+            "by the risk register UI). When supplied, each matching Asset_ID "
+            "uses its aggregated total as RF (clamped to 10-100) instead of "
+            "the legacy per-asset-type lookup."
+        ),
+    )
+    parser.add_argument(
         "files",
         nargs="*",
         type=Path,
@@ -1198,8 +1296,14 @@ def main(argv: Optional[list[str]] = None) -> int:
     explicit = [p.resolve() for p in args.files] if args.files else None
     output_path = args.output.resolve()
     input_dir = args.input_dir.resolve()
+    risk_path = args.risk_assessments.resolve() if args.risk_assessments else None
 
-    generate_master_priority(input_dir, output_path, explicit_files=explicit)
+    generate_master_priority(
+        input_dir,
+        output_path,
+        explicit_files=explicit,
+        risk_assessments_path=risk_path,
+    )
     return 0
 
 

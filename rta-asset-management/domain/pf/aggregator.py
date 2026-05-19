@@ -24,7 +24,8 @@ DEFAULT_WEIGHTS = {
 def calculate_pf(
     asset_type: str,
     aci: float,
-    weights: Optional[dict[str, float]] = None
+    weights: Optional[dict[str, float]] = None,
+    risk_score_override: Optional[int] = None,
 ) -> PFResult:
     """
     Calculate Priority Factor for an asset.
@@ -40,17 +41,22 @@ def calculate_pf(
         asset_type: Asset type key (e.g., "MANHOLE", "GANTRY")
         aci: Asset Condition Index (0-100)
         weights: Optional custom weights dict with keys "cf", "rf", "flf"
+        risk_score_override: Optional aggregated total from a per-asset
+            :class:`domain.risk.RiskAssessment`. When supplied, RF is derived
+            by direct clamping into [10, 100] instead of the legacy
+            per-asset-type lookup.
         
     Returns:
         PFResult with pf, cf, rf, flf values and weights used
         
     Examples:
         >>> result = calculate_pf("MANHOLE", 60)
-        >>> result.pf  # PF score
-        >>> result.cf  # Condition Factor component
+        >>> result.pf  # PF score from legacy RF lookup
+        >>> result = calculate_pf("MANHOLE", 60, risk_score_override=87)
+        >>> result.rf  # 87.0 (user-driven, clamped)
     """
     cf_value = calculate_cf(aci)
-    rf_value = calculate_rf(asset_type)
+    rf_value = calculate_rf(asset_type, override_score=risk_score_override)
     flf_value = calculate_flf(asset_type, aci)
     
     if weights is None:
