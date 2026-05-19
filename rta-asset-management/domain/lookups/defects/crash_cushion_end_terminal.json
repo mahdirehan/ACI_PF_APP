@@ -1,0 +1,160 @@
+{
+  "asset_type": "CRASH_CUSHION_END_TERMINAL",
+  "sheet_name": "CRASH CUSHION & END TERMINAL",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 5% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 10% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 15% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 20% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 25% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 30% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 35% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 40% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is 45% Damaged",
+          "score": null
+        },
+        {
+          "text": "Crash Cushion is more than 50% Damaged",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Rusting around 1% or Sand Accumulation around 1% Not Impacting the Movement of Mechanical Parts",
+          "score": null
+        },
+        {
+          "text": "Rusting around 3% or Sand Accumulation around 3% Not Impacting the Movement of Mechanical Parts",
+          "score": null
+        },
+        {
+          "text": "Rusting around 5% or Sand Accumulation around 5% Not Impacting the Movement of Mechanical Parts",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 10%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 15%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 20%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 25%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 30%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around 35%",
+          "score": null
+        },
+        {
+          "text": "Rusting around 10% or Sand Accumulation around more than 35%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

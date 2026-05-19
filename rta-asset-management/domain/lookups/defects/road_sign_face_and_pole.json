@@ -1,0 +1,192 @@
+{
+  "asset_type": "ROAD_SIGN_FACE_AND_POLE",
+  "sheet_name": "ROAD_SIGN_FACE and POLE",
+  "defect_categories": [
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "link",
+          "score": null
+        },
+        {
+          "text": "0.2-40White",
+          "score": 28
+        },
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "F",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "A",
+          "score": null
+        },
+        {
+          "text": "Road sign with 90% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 80% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 70% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 60% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 50% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 40% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 30% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 20% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with 10% visibility",
+          "score": null
+        },
+        {
+          "text": "Road sign with visibility less than 10%",
+          "score": null
+        },
+        {
+          "text": "road sign face",
+          "score": null
+        },
+        {
+          "text": "Road sign with 2% fading",
+          "score": 45
+        },
+        {
+          "text": "Road sign with 5% fading  and or minor misaligned",
+          "score": 40
+        },
+        {
+          "text": "Road sign with 10% fading",
+          "score": 35
+        },
+        {
+          "text": "Road sign with 20% fading",
+          "score": 30
+        },
+        {
+          "text": "Road sign with 25% fading and or face obscured by trees 25% or face deterioration 25%",
+          "score": 25
+        },
+        {
+          "text": "Road sign with 30% fading and or missing components",
+          "score": 20
+        },
+        {
+          "text": "Road sign with 35% fading and or damaged road sign 35%",
+          "score": 15
+        },
+        {
+          "text": "Road sign with 40% fading and or damaged road sign 40%",
+          "score": 10
+        },
+        {
+          "text": "Road sign with 50% fading and or face damaded 50%",
+          "score": 5
+        },
+        {
+          "text": "Road sign barely visible or severely damaged",
+          "score": 0
+        },
+        {
+          "text": "Visibility Rating (V)",
+          "score": null
+        },
+        {
+          "text": "Presence Rating (P)",
+          "score": null
+        },
+        {
+          "text": "ACI = V + P",
+          "score": null
+        },
+        {
+          "text": "ACI Rating",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "0.9*FaceACI + 0.1*PoleACI",
+  "weights": {
+    "face": 0.9,
+    "pole": 0.1
+  }
+}

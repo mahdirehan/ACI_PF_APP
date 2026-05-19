@@ -1,0 +1,86 @@
+{
+  "description": "Golden test cases extracted from Excel workbooks for ACI validation",
+  "source_file": "RoW Assets_ACI Sheet_20-05-2025.xlsx",
+  "test_cases": [
+    {
+      "asset_type": "MANHOLE",
+      "inputs": {
+        "functional_defect": "No Defect Found",
+        "appearance_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD",
+        "functional_score": 80,
+        "appearance_score": 20
+      }
+    },
+    {
+      "asset_type": "GULLY",
+      "inputs": {
+        "functional_defect": "No Defect Found",
+        "appearance_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD"
+      }
+    },
+    {
+      "asset_type": "GANTRY",
+      "inputs": {
+        "foundation_defect": "No Defect Found",
+        "structure_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD",
+        "foundation_score": 60,
+        "structure_score": 40
+      }
+    },
+    {
+      "asset_type": "GANTRY",
+      "inputs": {
+        "foundation_defect": "Foundation Has Surface Cracks up to 5mm width",
+        "structure_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 80,
+        "rating": "GOOD"
+      }
+    },
+    {
+      "asset_type": "FOOTPATH",
+      "inputs": {
+        "functional_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD"
+      }
+    },
+    {
+      "asset_type": "BOLLARDS",
+      "inputs": {
+        "functional_defect": "No Defect Found",
+        "appearance_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD"
+      }
+    },
+    {
+      "asset_type": "BARRIER",
+      "inputs": {
+        "functional_defect": "No Defect Found",
+        "appearance_defect": "No Defect Found"
+      },
+      "expected": {
+        "aci": 100,
+        "rating": "GOOD"
+      }
+    }
+  ]
+}

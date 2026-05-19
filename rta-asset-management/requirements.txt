@@ -1,0 +1,14 @@
+# RTA Asset Management - Python Calculation Engine
+# Core dependencies
+
+pydantic>=2.0.0
+openpyxl>=3.1.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development
+black>=23.0.0
+isort>=5.0.0
+mypy>=1.0.0

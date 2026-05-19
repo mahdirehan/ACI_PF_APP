@@ -1,0 +1,136 @@
+{
+  "asset_type": "GUARDRAIL",
+  "sheet_name": "GUARDRAIL",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Guardrail is functional with 5% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is functional with 10% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is functional with 15% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is functional with 20% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is having functionality issues with 25% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is having functionality issues with 30% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is having functionality issues with 40% damage",
+          "score": null
+        },
+        {
+          "text": "Guardrail is no longer functional with damages more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated 5%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated 10%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors 15%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors 20%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors 25%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors 30%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors 40%",
+          "score": null
+        },
+        {
+          "text": "Guardrail  protective coating deteriorated or rusted or missing reflectors more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "simple_f_a": [
+    "MANHOLE",
+    "GULLY",
+    "CURBSTONE",
+    "GUARDRAIL",
+    "FENCE",
+    "HUMP",
+    "BENCH",
+    "CYCLE_RACK",
+    "WOODEN_DECK",
+    "JOGGING_TRACK",
+    "ROAD_SIGN_POLE",
+    "DRAINAGE_POINT",
+    "CRASH_CUSHION_END_TERMINAL"
+  ],
+  "functional_only": [
+    "ROAD_STUD",
+    "FOOTPATH",
+    "CAMEL_GRID",
+    "CONTROL_CABINET",
+    "ROADSIDE_CAMERA",
+    "DECORATIVE_FURNITURE",
+    "LANDSCAPE",
+    "PARKING",
+    "LABAY",
+    "SHOULDER",
+    "ISLAND"
+  ],
+  "weighted_70_30": [
+    "BOLLARDS",
+    "ROAD_MARKING",
+    "ROAD_MARKING_SYMBOL"
+  ],
+  "weighted_80_20": [
+    "BARRIER"
+  ],
+  "complex": [
+    "GANTRY",
+    "TRAFIC_SIGNAL",
+    "STREETLIGHT",
+    "PERGOLA",
+    "PUBLIC_SHED",
+    "PARKING_TENTS",
+    "PEDESTRIAN_CROSSING",
+    "ROAD_SIGN_FACE_AND_POLE"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "asset_type": "DECORATIVE_FURNITURE",
+  "sheet_name": "DECORATIVE FURNITURE",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 5%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 10%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 15%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 20%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 25%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 30%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 35%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 40%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 45%",
+          "score": null
+        },
+        {
+          "text": "Decorative furniture is damaged 50%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

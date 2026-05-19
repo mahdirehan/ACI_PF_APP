@@ -1,0 +1,110 @@
+{
+  "asset_type": "CYCLE_RACK",
+  "sheet_name": "CYCLE RACK",
+  "defect_categories": [
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint or protective coating Deterioration 5% and or rusting 5%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 10% and or rusting 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 15% and or rusting 15%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 20% and or rusting 20%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 25% and or rusting 25%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 30% and or rusting 30%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 35% and or rusting 35%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 40% and or rusting 40%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 45% and or rusting 45%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 50% and or rusting 50%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 5%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 10%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 15%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 20%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 25%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 30%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 35%",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 40% (Safety concern)",
+          "score": null
+        },
+        {
+          "text": "Damaged components and or loose or missing nuts and bolts 45% (Safety concern)",
+          "score": null
+        },
+        {
+          "text": "Completely damaged",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

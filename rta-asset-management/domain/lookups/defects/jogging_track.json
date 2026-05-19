@@ -1,0 +1,160 @@
+{
+  "asset_type": "JOGGING_TRACK",
+  "sheet_name": "Jogging Track",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 1% and or damaged (worn out or torn) 1%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 2% and or damaged (worn out or torn) 2%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 5% and or damaged (worn out or torn) 5%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 10% and or damaged (worn out or torn) 10%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 20% and or damaged (worn out or torn) 20%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 25% and or damaged (worn out or torn) 25%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 30% and or damaged (worn out or torn) 30%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 35% and or damaged (worn out or torn) 35%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression 40% and or damaged (worn out or torn) 40%",
+          "score": null
+        },
+        {
+          "text": "Jogging Track has depression more than 40% and or damaged (worn out or torn) more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 15%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 20%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 30%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 35%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 40%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 45%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 50%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

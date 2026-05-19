@@ -1,0 +1,37 @@
+rta-asset-management/
+├── domain/
+│   ├── __init__.py
+│   ├── models.py              # Pydantic models (AssetType, DefectInput, ACIResult, PFResult)
+│   ├── aci/
+│   │   ├── __init__.py
+│   │   ├── calculator.py      # Main ACI dispatcher
+│   │   ├── simple.py          # F+A and F-only calculators
+│   │   ├── weighted.py        # 70/30 and 80/20 weighted calculators
+│   │   ├── complex.py         # Multi-component (Gantry, Traffic Signal, etc.)
+│   │   └── defect_mapper.py   # VLOOKUP-style defect-to-score mapping
+│   ├── pf/
+│   │   ├── __init__.py
+│   │   ├── cf.py              # Condition Factor (101-row lookup)
+│   │   ├── rf.py              # Risk Factor (min-max normalized)
+│   │   ├── flf.py             # Functional Life Factor (31 deterioration equations)
+│   │   └── aggregator.py      # PF = CF*0.6 + RF*0.2 + FLF*0.2
+│   └── lookups/
+│       ├── __init__.py
+│       ├── loader.py          # JSON loader with caching
+│       ├── rf_scores.json     # 32 asset risk scores
+│       ├── flf_equations.json # 29 deterioration curves
+│       ├── asset_types.json   # Asset categorization
+│       └── defects/           # 36 asset defect mappings
+├── tests/
+│   ├── __init__.py
+│   ├── test_cf.py             # 12 CF tests
+│   ├── test_rf.py             # 16 RF tests
+│   ├── test_flf.py            # 17 FLF tests
+│   ├── test_aci.py            # 27 ACI tests
+│   ├── test_pf.py             # 17 PF integration tests
+│   └── golden/
+│       └── aci_test_cases.json
+├── scripts/
+│   └── extract_lookups.py     # Excel-to-JSON extraction
+├── requirements.txt
+└── pyproject.toml

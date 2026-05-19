@@ -1,0 +1,160 @@
+{
+  "asset_type": "BARRIER",
+  "sheet_name": "BARRIER",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Barrier is 1% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 2% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 3% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 4% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 5% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 6% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 7% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 8% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is 9% damage / misaligned",
+          "score": null
+        },
+        {
+          "text": "Barrier is more than 10% damage / misaligned",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 2%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 4%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 6%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 8%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 10%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 12%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 14%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 16%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks is 18%",
+          "score": null
+        },
+        {
+          "text": "Paint peeled off / Suface cracks more than 20%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F*0.8 + A*0.2",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

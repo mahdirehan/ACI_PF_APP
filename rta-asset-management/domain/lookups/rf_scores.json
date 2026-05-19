@@ -1,0 +1,162 @@
+{
+  "TRAFFIC_SIGNAL": {
+    "name": "Traffic Signal",
+    "priority_level": "H",
+    "risk_score": 117
+  },
+  "ROAD_SIGN": {
+    "name": "Road Sign",
+    "priority_level": "H",
+    "risk_score": 109
+  },
+  "STREETLIGHT": {
+    "name": "Streetlight",
+    "priority_level": "H",
+    "risk_score": 101
+  },
+  "CRASH_CUSHION": {
+    "name": "Crash Cushion",
+    "priority_level": "H",
+    "risk_score": 97
+  },
+  "ROAD_MARKING": {
+    "name": "Road Marking",
+    "priority_level": "H",
+    "risk_score": 96
+  },
+  "ROAD_HUMP": {
+    "name": "Road Hump",
+    "priority_level": "H",
+    "risk_score": 89
+  },
+  "ROAD_STUDS": {
+    "name": "Road Studs",
+    "priority_level": "H",
+    "risk_score": 88
+  },
+  "BARRIER": {
+    "name": "Barrier",
+    "priority_level": "H",
+    "risk_score": 88
+  },
+  "GUARDRAIL": {
+    "name": "Guardrail",
+    "priority_level": "H",
+    "risk_score": 85
+  },
+  "ROAD_GANTRY": {
+    "name": "Road Gantry",
+    "priority_level": "H",
+    "risk_score": 83
+  },
+  "PEDESTRIAN_CROSSING": {
+    "name": "Pedestrian Crossing",
+    "priority_level": "H",
+    "risk_score": 82
+  },
+  "FENCE": {
+    "name": "Fence",
+    "priority_level": "H",
+    "risk_score": 80
+  },
+  "ROADSIDE_CAMERA": {
+    "name": "Roadside Camera",
+    "priority_level": "M",
+    "risk_score": 80
+  },
+  "CONTROL_CABINET": {
+    "name": "Control Cabinet",
+    "priority_level": "M",
+    "risk_score": 80
+  },
+  "MANHOLE": {
+    "name": "Manhole",
+    "priority_level": "M",
+    "risk_score": 79
+  },
+  "DRAINAGE_POINT": {
+    "name": "Drainage Point",
+    "priority_level": "M",
+    "risk_score": 78
+  },
+  "CURB_STONE": {
+    "name": "Curb Stone",
+    "priority_level": "M",
+    "risk_score": 77
+  },
+  "FOOTPATH": {
+    "name": "Footpath",
+    "priority_level": "M",
+    "risk_score": 75
+  },
+  "GULLY": {
+    "name": "Gully",
+    "priority_level": "M",
+    "risk_score": 74
+  },
+  "BOLLARDS": {
+    "name": "Bollards",
+    "priority_level": "M",
+    "risk_score": 74
+  },
+  "ISLAND": {
+    "name": "Island",
+    "priority_level": "L",
+    "risk_score": 73
+  },
+  "MEDIAN": {
+    "name": "Median",
+    "priority_level": "L",
+    "risk_score": 73
+  },
+  "PARKING": {
+    "name": "Parking",
+    "priority_level": "L",
+    "risk_score": 73
+  },
+  "LAYBY": {
+    "name": "Layby",
+    "priority_level": "L",
+    "risk_score": 73
+  },
+  "DECORATIVE_FURNITURE": {
+    "name": "Decorative Furniture",
+    "priority_level": "L",
+    "risk_score": 68
+  },
+  "CYCLE_RACK": {
+    "name": "Cycle Rack",
+    "priority_level": "L",
+    "risk_score": 68
+  },
+  "PARKING_TENT": {
+    "name": "Parking Tent",
+    "priority_level": "L",
+    "risk_score": 67
+  },
+  "PERGOLAS": {
+    "name": "Pergolas",
+    "priority_level": "L",
+    "risk_score": 67
+  },
+  "LANDSCAPE": {
+    "name": "Landscape",
+    "priority_level": "L",
+    "risk_score": 67
+  },
+  "PUBLIC_SHEDS": {
+    "name": "Public Sheds",
+    "priority_level": "L",
+    "risk_score": 65
+  },
+  "CAMEL_GRID": {
+    "name": "Camel Grid",
+    "priority_level": "L",
+    "risk_score": 64
+  },
+  "BENCHES": {
+    "name": "Benches",
+    "priority_level": "L",
+    "risk_score": 60
+  }
+}

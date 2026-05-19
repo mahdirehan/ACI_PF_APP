@@ -1,0 +1,160 @@
+{
+  "asset_type": "FENCE",
+  "sheet_name": "FENCE",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 2%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 4%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 6%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 8%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 10%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 12%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 14%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 16%",
+          "score": null
+        },
+        {
+          "text": "Fence misaligned / damaged 18%",
+          "score": null
+        },
+        {
+          "text": "Fence severely misaligned / damaged more that 20%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 2%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 4%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 6%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 8%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 10%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 12%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 14%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 16%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or peeled off / Rusting 18%",
+          "score": null
+        },
+        {
+          "text": "Major Paint faded or peeled off / Rusting 20% or more",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

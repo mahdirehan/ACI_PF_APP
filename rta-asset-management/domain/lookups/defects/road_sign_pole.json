@@ -1,0 +1,160 @@
+{
+  "asset_type": "ROAD_SIGN_POLE",
+  "sheet_name": "ROAD_SIGN_POLE",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Post Misaligned or damaged completely",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 35% and or any other deterioration 35%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 30% and or any other deterioration 30%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 25% and or any other deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 20% and or any other deterioration 20%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 10% and or any other deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 7% and or any other deterioration 7%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned 5% and or any other deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned Minor 2% and or any other minor deterioration 2%",
+          "score": null
+        },
+        {
+          "text": "Post Misaligned Minor 1% and or any other minor deterioration 1%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "Paint faded or Peeled off more than 40% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 40% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 30% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 25% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 20%  with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 15% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 10% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 5%",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 2%",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 1%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

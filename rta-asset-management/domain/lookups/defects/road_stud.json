@@ -1,0 +1,109 @@
+{
+  "asset_type": "ROAD_STUD",
+  "sheet_name": "ROAD STUD",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Road Studs Minor deterioration less than 1%",
+          "score": null
+        },
+        {
+          "text": "Road Studs Minor deterioration 2%",
+          "score": null
+        },
+        {
+          "text": "Reflectors deteriorated and or road studs slightly disloged for one or two road studs in one location",
+          "score": null
+        },
+        {
+          "text": "Reflectors deteriorated and or road studs slightly disloged for one or two road studs in two separate locations",
+          "score": null
+        },
+        {
+          "text": "Reflectors deteriorated and or road studs slightly disloged for multiple road studs consecutively",
+          "score": null
+        },
+        {
+          "text": "One or two Road studs damaged or missing in one location",
+          "score": null
+        },
+        {
+          "text": "Road studs damaged or missing in two separate locations",
+          "score": null
+        },
+        {
+          "text": "Multiple Road studs damaged or missing in two separate locations",
+          "score": null
+        },
+        {
+          "text": "Multiple Road studs damaged or missing in a row consecutively posing safety concerns",
+          "score": null
+        },
+        {
+          "text": "Completely Damaged or missing road studs in a row consecutively posing safety concerns",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

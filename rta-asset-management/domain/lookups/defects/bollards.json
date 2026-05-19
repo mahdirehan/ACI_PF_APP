@@ -1,0 +1,160 @@
+{
+  "asset_type": "BOLLARDS",
+  "sheet_name": "BOLLARDS",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Bollard is minor misaligned / damaged less than 5%",
+          "score": null
+        },
+        {
+          "text": "Bollard is minor misaligned / damaged 10%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 15%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 20%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 25%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 30%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 35%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 40%",
+          "score": null
+        },
+        {
+          "text": "Bollard is misaligned / damaged 45%",
+          "score": null
+        },
+        {
+          "text": "Bollard is damaged more than 45% and or completely missing",
+          "score": null
+        },
+        {
+          "text": "Please select Appropriate Functional and Appearance Defects",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "Paint is deteriorated 5%",
+          "score": 63
+        },
+        {
+          "text": "Paint is deteriorated 10%",
+          "score": 56
+        },
+        {
+          "text": "Paint is deteriorated 15%",
+          "score": 49
+        },
+        {
+          "text": "Paint is deteriorated 20%",
+          "score": 42
+        },
+        {
+          "text": "Paint is deteriorated 25%",
+          "score": 35
+        },
+        {
+          "text": "Paint is deteriorated 30%",
+          "score": 28
+        },
+        {
+          "text": "Paint is deteriorated 35%",
+          "score": 21
+        },
+        {
+          "text": "Paint is deteriorated 40%",
+          "score": 14
+        },
+        {
+          "text": "Paint is deteriorated more than 45%",
+          "score": 7
+        },
+        {
+          "text": "Major Paint faded or peeled off with rusting and or completely missing",
+          "score": 0
+        },
+        {
+          "text": "Please select Appropriate Functional and Appearance Defects",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F*0.7 + A*0.3",
+  "weights": {
+    "functional": 0.7,
+    "appearance": 0.3
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "asset_type": "PEDESTRIAN_CROSSING",
+  "sheet_name": "Pedestrian Crossing",
+  "defect_categories": [
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Minor Deterioration less than 1%",
+          "score": null
+        },
+        {
+          "text": "Minor Deterioration 3%",
+          "score": null
+        },
+        {
+          "text": "Minor Depression and or minor paver damages and or other minor deteriorations 5%",
+          "score": null
+        },
+        {
+          "text": "Minor Depression and or minor paver damages and or other minor deteriorations 10%",
+          "score": null
+        },
+        {
+          "text": "Minor Depression and or minor paver damages and or other minor deteriorations 15%",
+          "score": null
+        },
+        {
+          "text": "Depression and or  paver damages and or other deteriorations 20%",
+          "score": null
+        },
+        {
+          "text": "Depression and or  paver damages and or other deteriorations 25%",
+          "score": null
+        },
+        {
+          "text": "Depression and or  paver damages and or other deteriorations 30%",
+          "score": null
+        },
+        {
+          "text": "Depression and or  paver damages and or other deteriorations 35%",
+          "score": null
+        },
+        {
+          "text": "Depression and or  paver damages and or other deteriorations more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "visibility",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Visibility is 98%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 95%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 90%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 85%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 75%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 70%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 65%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 60%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 55%",
+          "score": null
+        },
+        {
+          "text": "Visibility is less than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "presence",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 5%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 10%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 15%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 20%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 40%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 60%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 65%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 70%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 75%",
+          "score": null
+        },
+        {
+          "text": "Marking is more than 80% not visible",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "0.5*Structural + 0.5*(V+P)",
+  "weights": {
+    "structural": 0.5,
+    "visibility_presence": 0.5
+  }
+}

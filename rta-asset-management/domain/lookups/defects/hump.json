@@ -1,0 +1,110 @@
+{
+  "asset_type": "HUMP",
+  "sheet_name": "HUMP",
+  "defect_categories": [
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 1%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 2%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 5%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 15%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 20%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 25%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 30%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated 35%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded and or deteriorated more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Minor Deterioration 1%",
+          "score": null
+        },
+        {
+          "text": "Minor Deterioration 2%",
+          "score": null
+        },
+        {
+          "text": "Low Depression and or other deteriorations 5%",
+          "score": null
+        },
+        {
+          "text": "Low Depression and or other deteriorations 10%",
+          "score": null
+        },
+        {
+          "text": "Low Depression and or other deteriorations 15%",
+          "score": null
+        },
+        {
+          "text": "Medium Depression and or other  deteriorations 20%",
+          "score": null
+        },
+        {
+          "text": "Medium Depression and or other deteriorations 25%",
+          "score": null
+        },
+        {
+          "text": "High Depression and or other deteriorations 30%",
+          "score": null
+        },
+        {
+          "text": "High Depression and or other deteriorations 35%",
+          "score": null
+        },
+        {
+          "text": "High Depression and or other deteriorations more than 40%",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

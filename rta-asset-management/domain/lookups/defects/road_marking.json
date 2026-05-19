@@ -1,0 +1,270 @@
+{
+  "asset_type": "ROAD_MARKING",
+  "sheet_name": "ROAD MARKING",
+  "defect_categories": [
+    {
+      "name": "visibility",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Visibility is 98%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 95%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 90%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 85%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 75%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 70%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 65%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 60%",
+          "score": null
+        },
+        {
+          "text": "Visibility is 55%",
+          "score": null
+        },
+        {
+          "text": "Visibility is less than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "presence",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 5%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 10%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 15%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 20%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 40%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 60%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 65%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 70%",
+          "score": null
+        },
+        {
+          "text": "Marking is faded / peeled of 75%",
+          "score": null
+        },
+        {
+          "text": "Marking is more than 80% not visible",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "Road Type",
+          "score": null
+        },
+        {
+          "text": "E & D Roads with limited access",
+          "score": null
+        },
+        {
+          "text": "D Roads without limited access",
+          "score": null
+        },
+        {
+          "text": "Road Type",
+          "score": null
+        },
+        {
+          "text": "E & D Roads with limited access",
+          "score": null
+        },
+        {
+          "text": "E & D Roads with limited access",
+          "score": null
+        },
+        {
+          "text": "D Roads without limited access",
+          "score": null
+        },
+        {
+          "text": "D Roads without limited access",
+          "score": null
+        },
+        {
+          "text": "Access",
+          "score": null
+        },
+        {
+          "text": "Limited",
+          "score": 200
+        },
+        {
+          "text": "Without Limited Access",
+          "score": 150
+        },
+        {
+          "text": "Color",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "Minimum RL for Whilte Lane Marking",
+          "score": null
+        },
+        {
+          "text": "link",
+          "score": null
+        },
+        {
+          "text": "E & D Roads with limited accessWhite",
+          "score": 200
+        },
+        {
+          "text": "E & D Roads with limited accessYellow",
+          "score": 150
+        },
+        {
+          "text": "D Roads without limited accessWhite",
+          "score": 150
+        },
+        {
+          "text": "D Roads without limited accessYellow",
+          "score": 100
+        },
+        {
+          "text": "Minimum RL for Yellow Lane marking",
+          "score": null
+        },
+        {
+          "text": "Minimum RL Values",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "V*0.7 + P*0.3",
+  "weights": {
+    "visibility": 0.7,
+    "presence": 0.3
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "asset_type": "MANHOLE",
+  "sheet_name": "MANHOLE",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Manhole Cover is 5% not levelled with the surface or the surface concrete of Manhole has deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Manhole Cover is 10% not levelled with the surface or the surface concrete of Manhole has deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Manhole Cover is 15% not levelled with the surface or the surface concrete of Manhole has deterioration 15%",
+          "score": null
+        },
+        {
+          "text": "Manhole Cover is 25% not levelled with the surface or the surface concrete of Manhole has deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Manhole Cover is 30% not levelled with the surface or the surface concrete of Manhole has deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "The Manhole Cover is damaged 40%",
+          "score": null
+        },
+        {
+          "text": "The Manhole Cover is damaged more than 40%",
+          "score": null
+        },
+        {
+          "text": "The Manhole Cover is Totally Missing (safety concern)",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 2%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 4%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 6%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 8%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off with rusting 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off with rusting 12%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off with rusting 20%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off with rusting more than 20%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

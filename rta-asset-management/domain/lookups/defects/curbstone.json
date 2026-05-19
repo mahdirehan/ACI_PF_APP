@@ -1,0 +1,136 @@
+{
+  "asset_type": "CURBSTONE",
+  "sheet_name": "CURBSTONE",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 5%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 10%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 15%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 20%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 25%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 30%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated 40%",
+          "score": null
+        },
+        {
+          "text": "Curbstones are misaligned or deteriorated more than 40% or completely missing",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 2%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 4%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 6%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off 8%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled 12%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled  20%",
+          "score": null
+        },
+        {
+          "text": "Paint Faded or Peeled off more than 20%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

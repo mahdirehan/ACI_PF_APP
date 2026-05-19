@@ -1,0 +1,109 @@
+{
+  "asset_type": "FOOTPATH",
+  "sheet_name": "FOOTPATH",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 1%, and or Depression / Settlement 1% and or Missing Pavers 1%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 3%, and or Depression / Settlement 3% and or Missing Pavers 3%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 5%, and or Depression / Settlement 5% and or Missing Pavers 5%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 10%, and or Depression / Settlement 10% and or Missing Pavers 10%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 15%, and or Depression / Settlement 15% and or Missing Pavers 15%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 20%, and or Depression / Settlement 20% and or Missing Pavers 20%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 25%, and or Depression / Settlement 25% and or Missing Pavers 25%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 30%, and or Depression / Settlement 30% and or Missing Pavers 30%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 35%, and or Depression / Settlement 35% and or Missing Pavers 35%",
+          "score": null
+        },
+        {
+          "text": "Footpath has Deteriorated Pavers (Weathered / cracked / damaged) 40%, and or Depression / Settlement 40% and or Missing Pavers 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

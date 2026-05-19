@@ -1,0 +1,56 @@
+{
+  "asset_type": "ROADSIDE_CAMERA",
+  "sheet_name": "ROADSIDE CAMERA",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Corrosion and/or misalignment and or physical damages 60% and or concrete foundation and bolts damages 60% and or camera lenses blurred/cracked/damaged and or camera completely damaged",
+          "score": null
+        },
+        {
+          "text": "Corrosion and/or misalignment and or physical damages 55% and or concrete foundation and bolts damages 55% and or camera lenses blurred/cracked/damaged",
+          "score": null
+        },
+        {
+          "text": "Corrosion and/or misalignment and or physical damages 50% and or concrete foundation and bolts damages 50% and or camera lenses blurred/cracked/damaged",
+          "score": null
+        },
+        {
+          "text": "Corrosion and/or misalignment and or physical damages 45% and or concrete foundation and bolts damages 45% and or camera lenses blurred/cracked/damaged",
+          "score": null
+        },
+        {
+          "text": "Corrosion and/or misalignment and or physical damages 40% and or concrete foundation and bolts damages 40% and or camera lenses blurred/cracked/damaged",
+          "score": null
+        },
+        {
+          "text": "Deterioration of corrosion and/or misalignment 40% and or concrete foundation and bolts damages 40%",
+          "score": null
+        },
+        {
+          "text": "Minor deterioration of paint 5%",
+          "score": null
+        },
+        {
+          "text": "Minor deterioration of paint 2%",
+          "score": null
+        },
+        {
+          "text": "Very minor deterioration of paint 1%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

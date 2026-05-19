@@ -1,0 +1,60 @@
+{
+  "asset_type": "CONTROL_CABINET",
+  "sheet_name": "CONTROL CABINET",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Controller box door is completely damaged and or missing",
+          "score": null
+        },
+        {
+          "text": "Controller box door has missing panel and or damaged 60%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have damages 55% and or Corrosion 55%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have damages 50% and or Corrosion 50%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have damages 40% and or Corrosion 40%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have deterioration 30% and or Corrosion 30%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have deterioration 20% and or Corrosion 20%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have mino deterioration 10% and or Corrosion 10%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have minor deterioration 5% and or Corrosion 5%",
+          "score": null
+        },
+        {
+          "text": "Controller box door, hinges, handle, and lock have minor deterioration 1% and or Corrosion 1%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

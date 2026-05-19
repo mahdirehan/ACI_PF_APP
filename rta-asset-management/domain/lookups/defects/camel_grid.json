@@ -1,0 +1,109 @@
+{
+  "asset_type": "CAMEL_GRID",
+  "sheet_name": "CAMEL GRID",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Camel grid is minor deteriorated less than 1%",
+          "score": null
+        },
+        {
+          "text": "Camel grid is minor deteriorated less than 5%",
+          "score": null
+        },
+        {
+          "text": "Camel grid is minor deteriorated less than 7%",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is 10% deteriorated and or rusted 10% and or partially filled with sand 10%",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is 15% deteriorated and or rusted 15% and or partially filled with sand 15%",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is deteriorated 20% and or rusted 20% and or camel grid components are missing 20% and or filled 20% with sand",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is deteriorated 25% and or rusted 25% and or camel grid components are missing 25% and or filled 25% with sand",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is deteriorated 30% and or rusted 30% and or camel grid components are missing 30% and or filled 30% with sand",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is deteriorated 40% and or rusted 40% and or camel grid components are missing 40% and or filled 40% with sand",
+          "score": null
+        },
+        {
+          "text": "Camel Grid is deteriorated more than 40% and or rusted more than 40% and or camel grid components are missing more than 40% and or filled more than 40% with sand",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

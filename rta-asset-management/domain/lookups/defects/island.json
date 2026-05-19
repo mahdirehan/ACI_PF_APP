@@ -1,0 +1,109 @@
+{
+  "asset_type": "ISLAND",
+  "sheet_name": "ISLAND",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Island has minor paver deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Island has minor paver deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Island has depression 15% and or paver deterioration 15%",
+          "score": null
+        },
+        {
+          "text": "Island has depression 20% and or paver deterioration 20%",
+          "score": null
+        },
+        {
+          "text": "Island has depression 25% and or paver deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Island has depression 30% and or paver deterioration 30%",
+          "score": null
+        },
+        {
+          "text": "Island has depression 35% and or paver deterioration 35% (safety concern)",
+          "score": null
+        },
+        {
+          "text": "Island has depression 40% and or paver deterioration 40% (safety concern)",
+          "score": null
+        },
+        {
+          "text": "Island has depression 45% and or paver deterioration 45% (safety concern)",
+          "score": null
+        },
+        {
+          "text": "Island has depression 50% and or paver deterioration 50% (safety concern)",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

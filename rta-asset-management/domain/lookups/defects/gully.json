@@ -1,0 +1,160 @@
+{
+  "asset_type": "GULLY",
+  "sheet_name": "GULLY",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 1% (minor) not levelled with the surface and or 1% minor deterioration and or Concrete is minor deteriorated 1%",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 2% (minor) not levelled with the surface and or 1% minor deterioration and or Concrete is minor deteriorated 2%",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 5% not levelled with the surface and or 5% minor deterioration and or Concrete is minor deteriorated 5%",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 5% (minor) not levelled with the surface and or Concrete is minor deteriorated 5%, and or 5% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 7% (minor) not levelled with the surface and or Concrete is minor deteriorated 7%, and or 7% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 10% not levelled with the surface and or deteriorated 10% and or Concrete is deteriorated 10%, and or 10% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 20% not levelled with the surface and or deteriorated 20% and or Concrete is deteriorated 20%, and or 20% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 30% not levelled with the surface and or deteriorated 30% and or Concrete is deteriorated 30%, and or 30% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is 40% not levelled with the surface and or deteriorated 40% and or partially missing and or Concrete is deteriorated 40%, and or 40% filled with sand",
+          "score": null
+        },
+        {
+          "text": "Gully Cover is not levelled more than 40% with the surface and or deteriorated more than 40% and or completely missing  and or Concrete is deteriorated more than 40%, and or filled with sand more than 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 1% Gully cover",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 2% Gully cover",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 5% Gully cover",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 10% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 15% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 20% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 25% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 30% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 40% Gully cover with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off more than 40% Gully cover with rusting",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

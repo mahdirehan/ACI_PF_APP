@@ -1,0 +1,275 @@
+{
+  "asset_type": "PERGOLA",
+  "sheet_name": "PERGOLA",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned Minor 1% and or any other minor deterioration 1%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned Minor 2% and or any other minor deterioration 2%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 5% and or any other deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 7% and or any other deterioration 7%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 10% and or any other deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 20% and or any other deterioration 20%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 25% and or any other deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 30% and or any other deterioration 30%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned 35% and or any other deterioration 35%",
+          "score": null
+        },
+        {
+          "text": "Column Misaligned or damaged more than 35%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 1%",
+          "score": null
+        },
+        {
+          "text": "Minor Paint faded or Peeled off 2%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 5%",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 10% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 15% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 20%  with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 25% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 30% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off 35% with rusting",
+          "score": null
+        },
+        {
+          "text": "Paint faded or Peeled off more than 40% with rusting",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "foundation",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Concrete has minor deterioration 5% and/or rusting 5% and/or lose bolts 5%",
+          "score": null
+        },
+        {
+          "text": "Concrete has minor deterioration 10% and/or rusting 10% and/or lose bolts 10%",
+          "score": null
+        },
+        {
+          "text": "Concrete has minor deterioration 20% and/or rusting 20% and/or lose bolts 20%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 25% and/or rusting 25% and/or lose bolts 25%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 30% and/or rusting 30% and/or lose bolts 30%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 40% and/or rusting 40% and/or lose bolts 40%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 45% and/or rusting 45% and/or lose bolts 45%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 50% and/or rusting 50% and/or lose bolts 50%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration 55% and/or rusting 55% and/or lose bolts 55%",
+          "score": null
+        },
+        {
+          "text": "Concrete has deterioration more than 60% and/or rusting more than 60% and/or lose or missing bolts  more than 60%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "roof",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 1%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 2%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 5%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 10%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 15%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 20%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 25%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 30%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 35%",
+          "score": null
+        },
+        {
+          "text": "Roof has deterioration and or corrosion 40%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "F",
+          "score": null
+        },
+        {
+          "text": "F",
+          "score": null
+        },
+        {
+          "text": "A",
+          "score": null
+        },
+        {
+          "text": "R",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "0.4*F + 0.3*(FC+A) + 0.3*Roof",
+  "weights": {
+    "foundation": 0.4,
+    "column": 0.3,
+    "roof": 0.3
+  }
+}

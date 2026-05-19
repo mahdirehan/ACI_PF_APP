@@ -1,0 +1,110 @@
+{
+  "asset_type": "BENCH",
+  "sheet_name": "BENCH",
+  "defect_categories": [
+    {
+      "name": "appearance",
+      "max_score": 20,
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 5%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 10%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 15%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 20%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 25%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 30%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 35%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 40%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 45%",
+          "score": null
+        },
+        {
+          "text": "Paint Deterioration 50%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Very minor Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting in metal components 5%",
+          "score": null
+        },
+        {
+          "text": "Minor Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting in metal components 10%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting in metal components 15%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting in metal components 20%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components 25%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components 30%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components 35%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components 40%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components 45%",
+          "score": null
+        },
+        {
+          "text": "Deterioration of wooden/Concrete/Granite/Marble/Plastic components and or rusting  in metal components more than 45%",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

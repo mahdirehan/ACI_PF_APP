@@ -1,0 +1,205 @@
+{
+  "STREET_MARKING_THREMOPLASTIC": {
+    "name": "Street Marking - Thremoplastic",
+    "equation": "(ACI-96)/-25",
+    "intercept": 96.0,
+    "slope": -25.0,
+    "total_life": 6.8
+  },
+  "STREET_MARKING_COLD_PAINT": {
+    "name": "Street Marking - Cold Paint",
+    "equation": "(ACI-99.167)/-14.583",
+    "intercept": 99.167,
+    "slope": -14.583,
+    "total_life": 7.0
+  },
+  "ROAD_SIGN": {
+    "name": "Road Sign",
+    "equation": "(ACI-107.15)/-8.4176",
+    "intercept": 107.15,
+    "slope": -8.4176,
+    "total_life": 13.0
+  },
+  "CRASH_CUSHION": {
+    "name": "Crash Cushion",
+    "equation": "(ACI-101.69)/-6.2463",
+    "intercept": 101.69,
+    "slope": -6.2463,
+    "total_life": 16.0
+  },
+  "GUARD_RAIL": {
+    "name": "Guard Rail",
+    "equation": "(ACI-103.3)/-2.7284",
+    "intercept": 103.3,
+    "slope": -2.7284,
+    "total_life": 38.0
+  },
+  "BARRIER": {
+    "name": "Barrier",
+    "equation": "(ACI-99.216)/-6.027",
+    "intercept": 99.216,
+    "slope": -6.027,
+    "total_life": 16.0
+  },
+  "FENCE": {
+    "name": "Fence",
+    "equation": "(ACI-103.48)/-4.2834",
+    "intercept": 103.48,
+    "slope": -4.2834,
+    "total_life": 24.0
+  },
+  "ROAD_STUDS": {
+    "name": "Road Studs",
+    "equation": "(ACI-103.33)/-6.8571",
+    "intercept": 103.33,
+    "slope": -6.8571,
+    "total_life": 15.0
+  },
+  "CROSSWALKS": {
+    "name": "Crosswalks",
+    "equation": "(ACI-99.639)/-12.097",
+    "intercept": 99.639,
+    "slope": -12.097,
+    "total_life": 8.2
+  },
+  "FOOTPATH": {
+    "name": "Footpath",
+    "equation": "(ACI-104.29)/-2.7375",
+    "intercept": 104.29,
+    "slope": -2.7375,
+    "total_life": 38.0
+  },
+  "CURB_STONE": {
+    "name": "Curb Stone",
+    "equation": "(ACI-102.73)/-2.2296",
+    "intercept": 102.73,
+    "slope": -2.2296,
+    "total_life": 46.0
+  },
+  "MANHOLE": {
+    "name": "Manhole",
+    "equation": "(ACI-102.22)/-3.2661",
+    "intercept": 102.22,
+    "slope": -3.2661,
+    "total_life": 31.0
+  },
+  "BOLLARDS": {
+    "name": "Bollards",
+    "equation": "(ACI-99.164)/-11.77",
+    "intercept": 99.164,
+    "slope": -11.77,
+    "total_life": 8.3
+  },
+  "SPILLWAY": {
+    "name": "Spillway",
+    "equation": "(ACI-103.3)/-2.7284",
+    "intercept": 103.3,
+    "slope": -2.7284,
+    "total_life": 38.0
+  },
+  "GULLY": {
+    "name": "Gully",
+    "equation": "(ACI-102.52)/-2.644",
+    "intercept": 102.52,
+    "slope": -2.644,
+    "total_life": 38.7
+  },
+  "GANTRY_GANTRY_FOUNDATION": {
+    "name": "Gantry - Gantry Foundation",
+    "equation": "(ACI-99.435)/-3.0273",
+    "intercept": 99.435,
+    "slope": -3.0273,
+    "total_life": 32.8
+  },
+  "GANTRY_STRUCTURE": {
+    "name": "Gantry Structure",
+    "equation": "(ACI-97.564)/-3.5836",
+    "intercept": 97.564,
+    "slope": -3.5836,
+    "total_life": 27.0
+  },
+  "GANTRY_SIGN": {
+    "name": "Gantry Sign",
+    "equation": "(ACI-106.08)/-7.5357",
+    "intercept": 106.08,
+    "slope": -7.5357,
+    "total_life": 14.0
+  },
+  "HUMP": {
+    "name": "Hump",
+    "equation": "(ACI-106.06)/-3.2815",
+    "intercept": 106.06,
+    "slope": -3.2815,
+    "total_life": 32.0
+  },
+  "BENCHES": {
+    "name": "Benches",
+    "equation": "(ACI-101.18)/-6.2868",
+    "intercept": 101.18,
+    "slope": -6.2868,
+    "total_life": 16.0
+  },
+  "CYCLE_RACKS": {
+    "name": "Cycle Racks",
+    "equation": "(ACI-102.21)/-6.5441",
+    "intercept": 102.21,
+    "slope": -6.5441,
+    "total_life": 15.0
+  },
+  "PUBLIC_SHEDS_AND_PARKING_TENTS_FOUNDATION": {
+    "name": "Public Sheds and Parking Tents - Foundation",
+    "equation": "(ACI-103.31)/-3.4138",
+    "intercept": 103.31,
+    "slope": -3.4138,
+    "total_life": 30.0
+  },
+  "PUBLIC_SHEDS_AND_PARKING_TENTS_COLUMN": {
+    "name": "Public Sheds and Parking Tents - Column",
+    "equation": "(ACI-102.89)/-4.4763",
+    "intercept": 102.89,
+    "slope": -4.4763,
+    "total_life": 23.0
+  },
+  "PUBLIC_SHEDS_AND_PARKING_TENTS_ROOF": {
+    "name": "Public Sheds and Parking Tents - Roof",
+    "equation": "(ACI-101.08)/-12.595",
+    "intercept": 101.08,
+    "slope": -12.595,
+    "total_life": 8.0
+  },
+  "PERGOLA_FOUNDATION": {
+    "name": "Pergola - Foundation",
+    "equation": "(ACI-103.9)/-4.6753",
+    "intercept": 103.9,
+    "slope": -4.6753,
+    "total_life": 22.0
+  },
+  "PERGOLA_COLUMN": {
+    "name": "Pergola - Column",
+    "equation": "(ACI-104.29)/-4.7669",
+    "intercept": 104.29,
+    "slope": -4.7669,
+    "total_life": 22.0
+  },
+  "PERGOLAS_ROOF": {
+    "name": "Pergolas - Roof",
+    "equation": "(ACI-103.33)/-6.857",
+    "intercept": 103.33,
+    "slope": -6.857,
+    "total_life": 15.0
+  },
+  "ISLAND": {
+    "name": "Island",
+    "equation": "(ACI-104.29)/-2.7375",
+    "intercept": 104.29,
+    "slope": -2.7375,
+    "total_life": 38.0
+  },
+  "CAMEL_GRID": {
+    "name": "Camel Grid",
+    "equation": "(ACI-102.89)/-4.4763",
+    "intercept": 102.89,
+    "slope": -4.4763,
+    "total_life": 23.0
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "asset_type": "DRAINAGE_POINT",
+  "sheet_name": "DRAINAGE POINT",
+  "defect_categories": [
+    {
+      "name": "blockage",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Drainage Points with blockage 5%",
+          "score": null
+        },
+        {
+          "text": "Drainage Points with blockage 10%",
+          "score": null
+        },
+        {
+          "text": "Drainage Points with blockage 30%",
+          "score": null
+        },
+        {
+          "text": "Drainage Points with blockage 60%",
+          "score": null
+        },
+        {
+          "text": "Drainage Points with blockage more than 60%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "concrete_damage",
+      "defects": [
+        {
+          "text": "No Defect Found",
+          "score": null
+        },
+        {
+          "text": "Concrete Damage 5%",
+          "score": null
+        },
+        {
+          "text": "Concrete Damage 10%",
+          "score": null
+        },
+        {
+          "text": "Concrete Damage 30%",
+          "score": null
+        },
+        {
+          "text": "Concrete Damage 60%",
+          "score": null
+        },
+        {
+          "text": "Concrete Damage more than 60%",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F + A",
+  "weights": {
+    "functional": 0.8,
+    "appearance": 0.2
+  }
+}

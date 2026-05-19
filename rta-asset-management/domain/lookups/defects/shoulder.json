@@ -1,0 +1,60 @@
+{
+  "asset_type": "SHOULDER",
+  "sheet_name": "SHOULDER",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 50%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 45%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 40%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 35%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 30%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 25%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 20%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 15%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 10%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering 5%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}

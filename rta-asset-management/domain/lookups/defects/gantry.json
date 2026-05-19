@@ -1,0 +1,407 @@
+{
+  "asset_type": "GANTRY",
+  "sheet_name": "GANTRY",
+  "defect_categories": [
+    {
+      "name": "other",
+      "defects": [
+        {
+          "text": "link",
+          "score": null
+        },
+        {
+          "text": "0.2-40White",
+          "score": 42
+        },
+        {
+          "text": "Yes",
+          "score": null
+        },
+        {
+          "text": "No",
+          "score": null
+        },
+        {
+          "text": "F",
+          "score": null
+        },
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "F",
+          "score": null
+        },
+        {
+          "text": "V",
+          "score": null
+        },
+        {
+          "text": "S",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "S",
+          "score": null
+        },
+        {
+          "text": "P",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration 2%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration 4%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration or rusting 6%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration or rusting 8%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration or rusting 10%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration or rusting 15%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration  or rusting 20%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration or rusting 25%",
+          "score": null
+        },
+        {
+          "text": "Foundation has Surface Deterioration  or rusting 30%",
+          "score": null
+        },
+        {
+          "text": "Foundation has major damages more than 40%",
+          "score": null
+        },
+        {
+          "text": "Visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 90% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 80% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 70% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 60% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 50% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 40% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 30% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 20% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 10% visibility",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with visibility less than 10%",
+          "score": null
+        },
+        {
+          "text": "Visibility Score",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "GOOD",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "FAIR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "POOR",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "Orange",
+          "score": null
+        },
+        {
+          "text": "Green",
+          "score": null
+        },
+        {
+          "text": "Red",
+          "score": null
+        },
+        {
+          "text": "Blue",
+          "score": null
+        },
+        {
+          "text": "Brown",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "Orange",
+          "score": null
+        },
+        {
+          "text": "Green",
+          "score": null
+        },
+        {
+          "text": "Red",
+          "score": null
+        },
+        {
+          "text": "Blue",
+          "score": null
+        },
+        {
+          "text": "Brown",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "Orange",
+          "score": null
+        },
+        {
+          "text": "Green",
+          "score": null
+        },
+        {
+          "text": "Red",
+          "score": null
+        },
+        {
+          "text": "Blue",
+          "score": null
+        },
+        {
+          "text": "Brown",
+          "score": null
+        },
+        {
+          "text": "White",
+          "score": null
+        },
+        {
+          "text": "Yellow",
+          "score": null
+        },
+        {
+          "text": "Orange",
+          "score": null
+        },
+        {
+          "text": "Green",
+          "score": null
+        },
+        {
+          "text": "Red",
+          "score": null
+        },
+        {
+          "text": "Blue",
+          "score": null
+        },
+        {
+          "text": "Brown",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "presence",
+      "defects": [
+        {
+          "text": "Presence",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 2% fading",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 5% fading",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 10% fading",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 20% fading",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 25% fading",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 30% fading or damages 20%",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 35% fading or damages 25%",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 40% fading or damages 30%",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign with 50% fading or damages 40%",
+          "score": null
+        },
+        {
+          "text": "In-service gantry sign barely visible or severely damaged more than 40%",
+          "score": null
+        },
+        {
+          "text": "Presence Score",
+          "score": null
+        }
+      ]
+    },
+    {
+      "name": "structure",
+      "defects": [
+        {
+          "text": "Gantry Post and/or Beam has 2% rusting / deterioration",
+          "score": 90
+        },
+        {
+          "text": "Gantry Post and/or Beam has 4% rusting / deterioration",
+          "score": 80
+        },
+        {
+          "text": "Gantry Post and/or Beam has 6% rusting / deterioration",
+          "score": 70
+        },
+        {
+          "text": "Gantry Post and/or Beam has 8% rusting / deterioration",
+          "score": 60
+        },
+        {
+          "text": "Gantry Post and/or Beam has 10% rusting / deterioration",
+          "score": 50
+        },
+        {
+          "text": "Gantry Post and/or Beam has 15% rusting / deterioration effecting the functionality of the structure",
+          "score": 40
+        },
+        {
+          "text": "Gantry Post and/or Beam has 20% rusting / deterioration effecting the functionality of the structure",
+          "score": 30
+        },
+        {
+          "text": "Gantry Post and/or Beam has 25% rusting / deterioration effecting the functionality of the structure",
+          "score": 20
+        },
+        {
+          "text": "Gantry Post and/or Beam has 30% rusting / deterioration effecting the functionality of the structure",
+          "score": 10
+        },
+        {
+          "text": "Gantry Post and/or beam are damaged more than 40%",
+          "score": 0
+        }
+      ]
+    }
+  ],
+  "aci_formula": "0.4*F + 0.3*SignScore + 0.3*(V+P)",
+  "weights": {
+    "foundation": 0.4,
+    "sign_score": 0.3,
+    "visibility_presence": 0.3
+  }
+}

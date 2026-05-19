@@ -1,0 +1,60 @@
+{
+  "asset_type": "LABAY",
+  "sheet_name": "LABAY",
+  "defect_categories": [
+    {
+      "name": "functional",
+      "max_score": 80,
+      "defects": [
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 50%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 45%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 40%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 35%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 30%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 25%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 20%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 15%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 10%",
+          "score": null
+        },
+        {
+          "text": "Pavement surface has minor deterioration such as cracks, weathering, damaged tiles 5%",
+          "score": null
+        },
+        {
+          "text": "No Defect Found",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "aci_formula": "F",
+  "weights": {
+    "functional": 1.0
+  }
+}
